@@ -1,15 +1,149 @@
 .homePage {
+    position: absolute;
+    top: 0;
+}
+
+.homeContent {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgroundCorner {
+    min-width: 100vw;
+    max-height: 100vh;
+    position: absolute;
+    opacity: .7;
 }
 
 .homeTitle {
-    font-size: 5em;
-    width: 100vw;
+    margin-top: 1vh;
+    font-size: 8em;
+    width: 30vw;
     height: 20vh;
     font-family: 'Permanent Marker', cursive;
+    z-index: 40;
+    text-align: center;
+    margin-left: 35vw;
+    margin-right: 35vw;
+}
+
+.resultsButton {
+    min-width: 16vw;
+    min-height: 6vh;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgb(2, 73, 2);
+    border: none;
+    color: white;
+    font-size: 1.6em;
+    font-family: 'Permanent Marker', cursive;
+    margin-top: 4vh;
+}
+
+.cornerDescrip {
+    width: 50vw;
+    font-weight: bold;
+    background: white;
+    opacity: .8;
+    padding: 5px;
+    font-size: 1.5em;
+    top: -5vh;
+    right: 0;
+    left: 0;
+    margin: auto;
+    font-family: 'Bree Serif', serif; 
+}
+
+.inputFields {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: flex;
+}
 
+.address1, .address2, .resultsButton, .cornerDescrip, .homeTitle {
+    position: relative;
+}
+
+.address1, .address2 {
+    min-width: 50vw;
+    min-height: 4vh; 
+    padding: 8px;
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: 3px solid rgb(2, 73, 2);
+    opacity: .9;
+}
+
+.address1 {
+    margin-bottom: 4vh;
+}
+
+.address1::placeholder {
+    color: rgb(2, 73, 2);
+}
+
+.address2::placeholder {
+    color: rgb(2, 73, 2);
+}
+
+.firstPlace, .secondPlace {
+    position: absolute;
+    width: 10vw;
+    text-align: center;
+    color: rgb(2, 73, 2);
+    border-radius: 5px;
+    font-size: .8em;
+    height: 1.6vh;
+    background: white;
+    padding: 1px;
+    opacity: 1;
+}
+
+.firstPlace {
+    top: 43.6vh;
+    left: 25vw;
+    animation: move .3s linear;
+}
+
+.secondPlace {
+    top: 53.7vh;
+    left: 25vw;
+    animation: move2 .3s linear;
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+        top: 46vh;
+        font-size: 1.5em;
+        width: 20vw;
+
+    }
+
+    to {
+        opacity: 1;
+        top: 43.6vh;
+        font-size: .8em;
+        width: 10vw;
+    }
+}
+
+@keyframes move2 {
+    from {
+        opacity: 0;
+        top: 55vh;
+        font-size: 1.5em;
+        width: 20vw;
+
+    }
+
+    to {
+        opacity: 1;
+        top: 53.7vh;
+        font-size: .8em;
+        width: 10vw;
+    }
 }

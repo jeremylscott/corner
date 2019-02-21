@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {connect} from 'react-redux'
 import './home.scss'
+import streetcorner from '../../img/streetcorner.jpg'
 
 const Home = (props) => {
 
@@ -23,10 +24,27 @@ const Home = (props) => {
 
     return (
             <div className='homePage'>
-                <h1 className='homeTitle'>Corner</h1>
-                <input onChange={handleChange} name='address1' placeholder='Please enter the first address'/>
-                <input onChange={handleChange} name='address2' placeholder='Please enter the second address'/>
-                <button onClick={handleResults} className='resultsButton'>Show me the options</button>
+                <img src={streetcorner} className='backgroundCorner'/>
+                <div className='homeContent'>
+                    <h1 className='homeTitle'>Corner</h1>
+                    <p className='cornerDescrip'>
+                        Corner makes it easy to find middle ground.  If you want to meet somewhere for lunch or dinner
+                        simply put in your friends address and then your address and corner will find the halfway point, and 
+                        display the restaurant options that are available at on the corner (or within a few hundred yards).
+                    </p>
+                    <div className='inputFields'>
+                        <input onChange={handleChange} name='address1' placeholder='Please enter the first address'
+                            className='address1'/>
+                        <input onChange={handleChange} name='address2' placeholder='Please enter the second address'
+                            className='address2'/>
+                        <button onClick={handleResults} className='resultsButton'>Show me the options</button>
+                    </div>
+                </div>
+
+            <span className='firstPlace'>Please enter the first address</span>
+            <span className='secondPlace'>Please enter the second address</span>
+
+
             </div>
     )
 
