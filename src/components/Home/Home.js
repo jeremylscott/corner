@@ -16,13 +16,17 @@ const Home = (props) => {
         }
     }
 
+    const handleResults = () => {
+        props.getResults(props.address1,props.address2)
+    }
+
 
     return (
             <div className='homePage'>
                 <h1 className='homeTitle'>Corner</h1>
                 <input onChange={handleChange} name='address1' placeholder='Please enter the first address'/>
                 <input onChange={handleChange} name='address2' placeholder='Please enter the second address'/>
-                <button>Show me the options</button>
+                <button onClick={handleResults} className='resultsButton'>Show me the options</button>
             </div>
     )
 
