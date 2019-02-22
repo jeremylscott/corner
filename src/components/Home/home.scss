@@ -105,22 +105,22 @@
 .firstPlace {
     top: -1.2vh;
     left: 1vw;
-    animation: move .2s linear;
+    animation: move .1s linear;
     opacity: 1;
 }
 
 .secondPlace {
     top: -1.2vh;
     left: 1vw;
-    animation: move2 .2s linear;
+    animation: move2 .1s linear;
     opacity: 1;
 }
 
 @keyframes move {
     from {
         opacity: 0;
-        top: 46vh;
-        left: 23vw;
+        top: 3vh;
+        left: 1vw;
         font-size: 1.5em;
         width: 20vw;
 
@@ -128,7 +128,7 @@
 
     to {
         opacity: 1;
-        top: 43.6vh;
+        top: -1.2vh;
         font-size: .8em;
         width: 10vw;
     }
@@ -137,8 +137,8 @@
 @keyframes move2 {
     from {
         opacity: 0;
-        left: 23vw;
-        top: 55vh;
+        left: 1vw;
+        top: 3vh;
         font-size: 1.5em;
         width: 20vw;
 
@@ -146,7 +146,7 @@
 
     to {
         opacity: 1;
-        top: 53.7vh;
+        top: -1.2vh;
         font-size: .8em;
         width: 10vw;
     }
