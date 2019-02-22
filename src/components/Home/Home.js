@@ -32,22 +32,26 @@ const Home = (props) => {
                         simply put in your friends address and then your address and corner will find the halfway point, and 
                         display the restaurant options that are available at on the corner (or within a few hundred yards).
                     </p>
-                    <div className='inputFields'>
+                    <div className='inputField1'>
                         <input onChange={handleChange} name='address1' placeholder='Please enter the first address'
                             className='address1'/>
+                            {
+                                props.address1 &&
+                                <span className='firstPlace'>Please enter the first address</span>
+                            }
+                    </div>
+                    <div className='inputField2'>
                         <input onChange={handleChange} name='address2' placeholder='Please enter the second address'
                             className='address2'/>
-                        <button onClick={handleResults} className='resultsButton'>Show me the options</button>
+                            {
+                                props.address2 &&
+                            <span className='secondPlace'>Please enter the second address</span>
+                            }
                     </div>
+                        <button onClick={handleResults} className='resultsButton'>Show me the options</button>
                 </div>
-                    {
-                        props.address1 &&
-                        <span className='firstPlace'>Please enter the first address</span>
-                    }
-                    {
-                        props.address2 &&
-                        <span className='secondPlace'>Please enter the second address</span>
-                    }
+                    
+                    
 
             </div>
     )
