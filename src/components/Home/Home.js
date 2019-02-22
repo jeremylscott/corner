@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {connect} from 'react-redux'
 import './home.scss'
 import streetcorner from '../../img/streetcorner.jpg'
+import {updateAddress1,updateAddress2} from '../../ducks/reducer'
 
 const Home = (props) => {
 
@@ -40,10 +41,14 @@ const Home = (props) => {
                         <button onClick={handleResults} className='resultsButton'>Show me the options</button>
                     </div>
                 </div>
-
-            <span className='firstPlace'>Please enter the first address</span>
-            <span className='secondPlace'>Please enter the second address</span>
-
+                    {
+                        props.address1 &&
+                        <span className='firstPlace'>Please enter the first address</span>
+                    }
+                    {
+                        props.address2 &&
+                        <span className='secondPlace'>Please enter the second address</span>
+                    }
 
             </div>
     )
@@ -56,4 +61,4 @@ const Home = (props) => {
 
 const mapStateToProps = state => state
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps,{updateAddress1,updateAddress2})(Home)
