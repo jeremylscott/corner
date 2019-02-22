@@ -6,7 +6,6 @@ import {updateAddress1,updateAddress2} from '../../ducks/reducer'
 
 const Home = (props) => {
 
-
     const handleChange = (e) => {
         switch(e.target.name) {
             case 'address1':

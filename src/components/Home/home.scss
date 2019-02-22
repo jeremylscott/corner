@@ -105,19 +105,22 @@
 .firstPlace {
     top: 43.6vh;
     left: 25vw;
-    animation: move .3s linear;
+    animation: move .2s linear;
+    opacity: 1;
 }
 
 .secondPlace {
     top: 53.7vh;
     left: 25vw;
-    animation: move2 .3s linear;
+    animation: move2 .2s linear;
+    opacity: 1;
 }
 
 @keyframes move {
     from {
         opacity: 0;
         top: 46vh;
+        left: 23vw;
         font-size: 1.5em;
         width: 20vw;
 
@@ -134,6 +137,7 @@
 @keyframes move2 {
     from {
         opacity: 0;
+        left: 23vw;
         top: 55vh;
         font-size: 1.5em;
         width: 20vw;

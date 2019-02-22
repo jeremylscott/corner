@@ -31,11 +31,11 @@ function reducer(state=initialState, action) {
     switch(action.type) {
         case ADDRESS1:
             return {
-                ...state, address1: action.payload.data
+                ...state, address1: action.payload
             }
         case ADDRESS2:
             return {
-                ...state, address2: action.payload.data
+                ...state, address2: action.payload
             }
         default: return state
     }
